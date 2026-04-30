@@ -6,7 +6,7 @@
 M.Sc. Applied Data Science & Analytics  
 SRH Hochschule Heidelberg  
 
-**Supervisor:** Prof. Dr. Jalali  
+**Supervisor:** Prof. Dr. Jalali, Mehrdad  
 **Secondary Supervisor:** Prof. Dr.-Ing. Binh Vu  
 
 ---
