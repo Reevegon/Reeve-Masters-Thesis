@@ -103,7 +103,7 @@ The technical results, dashboard, evaluation findings, and final thesis chapters
 
 ---
 
-## Repository Structure
+## Github Repository Structure
 
 ```text
 Documentation/
