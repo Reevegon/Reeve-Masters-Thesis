@@ -281,4 +281,172 @@ Phases 1, 2, 3, 4, and 5 are completed.
 
 The machine learning prediction model and SHAP explainability outputs are complete and validated.
 
-The next step is **Phase 6 — Interactive Power BI Dashboard Development**.
+### Phase 6 — Interactive Power BI Dashboard
+
+**Status: Completed**
+
+An interactive visual analytics dashboard was developed in Microsoft Power BI using the customer data, machine learning predictions, model-performance results, risk categories, and SHAP explanation outputs created during the previous phases.
+
+The dashboard combines:
+
+- Customer churn predictions
+- Churn probabilities
+- Actual churn outcomes
+- Customer risk categories
+- Global SHAP explanations
+- Individual SHAP explanations
+- Customer-segment comparisons
+- Model-performance metrics
+- Classification-threshold analysis
+
+The final Power BI report contains six interactive dashboard pages.
+
+#### Page 1 — Executive Overview
+
+Provides a high-level summary of the customer churn prediction system.
+
+Main components include:
+
+- Total customers
+- Actual churn customers
+- Predicted churn customers
+- Average churn probability
+- Selected classification threshold
+- Recall
+- ROC-AUC
+- F1-score
+- Actual churn distribution
+- Predicted churn distribution
+- Churn-probability distribution
+- Actual versus predicted counts
+- Confusion matrix
+- Key analytical insights
+
+#### Page 2 — Customer Risk Analysis
+
+Supports interactive customer-risk exploration and retention planning.
+
+Main components include:
+
+- Contract slicer
+- Internet Service slicer
+- Payment Method slicer
+- Predicted Churn slicer
+- Actual Churn slicer
+- Risk Category slicer
+- High-risk customer count
+- Medium-risk customer count
+- Low-risk customer count
+- Highest churn probability
+- Customer closest to the selected threshold
+- Top high-risk customer ranking
+- Risk-category distribution
+- Tenure versus churn-probability analysis
+- Detailed customer-risk table
+- Analyst notes
+
+#### Page 3 — Global Model Explanation
+
+Explains the overall behaviour of the selected machine learning model using global SHAP results.
+
+Main components include:
+
+- Number of original features explained
+- SHAP output scale
+- SHAP base value
+- Most influential global feature
+- Second-most influential global feature
+- Global SHAP feature-importance ranking
+- Average direction of feature influence
+- Top-ten global feature table
+- Tenure–SHAP relationship
+- Monthly Charges–SHAP relationship
+- Global explanation insights
+
+The global explanation showed that **Tenure** and **Contract** were the two most influential original customer features.
+
+#### Page 4 — Individual Customer Explanation
+
+Provides a detailed explanation for an individually selected customer.
+
+Main components include:
+
+- Customer-selection slicer
+- Selected customer identifier
+- Predicted churn probability
+- Predicted churn classification
+- Actual churn classification
+- Selected classification threshold
+- SHAP base value
+- Original customer profile
+- Customer-risk gauge
+- Risk margin relative to the threshold
+- Factors increasing churn risk
+- Factors reducing churn risk
+- Dynamically generated prediction explanation
+
+The page updates automatically whenever another customer is selected.
+
+#### Page 5 — Customer Segment Comparison
+
+Supports comparison of churn risk across important customer segments.
+
+Main components include:
+
+- Contract slicer
+- Internet Service slicer
+- Payment Method slicer
+- Senior Citizen slicer
+- Paperless Billing slicer
+- Highest-risk contract probability
+- Highest-risk internet-service probability
+- Highest-risk payment-method probability
+- Senior-citizen average churn probability
+- Average churn probability by contract
+- Predicted churn rate by internet service
+- Actual churn rate by payment method
+- Average churn probability by senior-citizen status
+- Average churn probability by paperless-billing status
+- Segment summary matrix
+- Overall segment interpretation
+
+Important segment-level findings included:
+
+- Month-to-month contracts had the highest average churn probability.
+- Fibre-optic customers had the highest predicted churn rate.
+- Electronic-check customers had the highest actual churn rate.
+- Senior citizens had a higher average churn probability than non-senior customers.
+- Customers using paperless billing had a higher average churn probability than customers without paperless billing.
+
+These findings describe model patterns and associations and do not establish causation.
+
+#### Page 6 — Model Performance Summary
+
+Summarizes final model quality and the effect of classification-threshold selection.
+
+Main components include:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+- PR-AUC
+- Brier score
+- Selected threshold
+- Model ranking across performance metrics
+- Default versus selected-threshold comparison
+- False-negative reduction waterfall
+- Threshold rationale
+- Selected-model summary
+
+The selected threshold of `0.27` improved recall and reduced the number of missed churn customers.
+
+```text
+Default threshold: 0.50
+Selected threshold: 0.27
+
+Default false negatives: 185
+Selected false negatives: 72
+Reduction: 113 customers
+Percentage reduction: approximately 61.1%
